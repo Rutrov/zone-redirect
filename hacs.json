@@ -1,0 +1,6 @@
+{
+    "name": "zone-redirect",
+    "content_in_root": true,
+    "render_readme": true,
+    "filename": "zone-redirect.js"
+}
