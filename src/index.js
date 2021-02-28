@@ -26,7 +26,7 @@ function checkRedirect() {
                 if (homeAssistant.states[user].attributes.user_id == homeAssistant.user.id) {
                     // User match for this redirect definition, check if they are in any of these zones
                     redirect.zones.forEach(zone => {
-                        if (homeAssistant.states[user].state == homeAssistant.states[zone].attributes.friendly_name) {
+                        if (homeAssistant.states[user].state.toLowerCase() == homeAssistant.states[zone].attributes.friendly_name.toLowerCase()) {
                             // Navigate as the user is in this zone
                             navigate(window, redirect.path);
                         }
